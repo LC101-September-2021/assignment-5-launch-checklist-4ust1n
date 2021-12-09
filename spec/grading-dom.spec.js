@@ -36,7 +36,6 @@ describe ("GRADING DOM MANIPULATION TEST: ", function () {
         window.addEventListener('load', resolve);
           container = dom.window.document.body;
           list = screen.getByTestId(container, "faultyItems");
-          console.log(list.style)
           h2 = screen.getByTestId(container, "launchStatus");
           pilotStatus = screen.getByTestId(container, "pilotStatus");
           copilotStatus = screen.getByTestId(container, "copilotStatus");
@@ -54,8 +53,8 @@ describe ("GRADING DOM MANIPULATION TEST: ", function () {
 
    it ("Launch CheckList is ready to go", function() {
       // Check page before form submission to make sure everything is working
-     expect(list.style.visibility).toEqual("hidden"); 
-     expect(pilotStatus.textContent).toEqual("Pilot Ready");
+      expect(list.style.visibility).toEqual("hidden"); 
+      expect(pilotStatus.textContent).toEqual("Pilot Ready");
       expect(copilotStatus.textContent).toEqual("Co-pilot Ready");
       expect(fuelStatus.textContent).toEqual("Fuel level high enough for launch");
       expect(cargoStatus.textContent).toEqual("Cargo mass low enough for launch");
