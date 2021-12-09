@@ -25,7 +25,7 @@ function validateInput(testInput) {
     if (isNaN(testInput) && testInput !== '') {
         return result += "Not a Number"
     } 
-    if (testInput === Number(testInput)) {
+    if (testInput == Number(testInput)) {
         return result += 'Is a Number'
     }
     return result;
@@ -74,7 +74,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
         faulty.style.visibility = 'visible'
         fuelStatus.innerHTML = 'Fuel level high enough for launch'
         cargoStatus.innerHTML = 'Cargo mass low enough for launch'
-        launchStatus.innerHTML = 'Shuttle is ready for launch'
+        launchStatus.innerHTML = 'Shuttle is Ready for Launch'
         launchStatus.style.color = 'rgb(65, 159, 106)'
     }
 };
