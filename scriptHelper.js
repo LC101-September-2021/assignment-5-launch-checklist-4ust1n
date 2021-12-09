@@ -55,7 +55,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     let copilotStatus = document.getElementById('copilotStatus')
 
     list.style.visibility = 'hidden'
-    faulty.style.visibility = 'visible'
     fuelStatus.innerHTML = 'Fuel level high enough for launch'
     cargoStatus.innerHTML = 'Cargo mass low enough for launch'
     launchStatus.innerHTML = 'Shuttle is Ready for Launch'
