@@ -6,10 +6,6 @@ div {
    text-align: left;
 }
 
-#faultyItems {
-   visibility: hidden;   
-}
-
 #launchForm {
    background-color: #ECF0F1;
    text-align: center;
@@ -31,6 +27,10 @@ div {
 #missionTarget img {
    max-width: 40%;
    max-height: 250px;
+}
+
+#faultyItems {
+   visibility: hidden;   
 }
 
 #missionTarget {
