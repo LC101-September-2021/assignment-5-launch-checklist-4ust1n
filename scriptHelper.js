@@ -54,13 +54,14 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     let pilotStatus = document.getElementById('pilotStatus')
     let copilotStatus = document.getElementById('copilotStatus')
 
-    list.style.visibility = 'visible'
+    list.style.visibility = 'hidden'
     fuelStatus.innerHTML = 'Fuel level high enough for launch'
     cargoStatus.innerHTML = 'Cargo mass low enough for launch'
     launchStatus.innerHTML = 'Shuttle is Ready for Launch'
     launchStatus.style.color = 'rgb(65, 159, 106)'
 
     if (fuelLevel < 10000) {
+        list.style.visibility = 'visible'
         faulty.style.visibility = 'visible'
         fuelStatus.innerHTML = 'Fuel level too low for launch'
         launchStatus.style.color = 'rgb(199, 37, 78)'
@@ -69,6 +70,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`
     }
     if (cargoMass > 10000) {
+        list.style.visibility = 'visible'
         faulty.style.visibility = 'visible'
         cargoStatus.innerHTML = 'Cargo mass too heavy for launch'
         launchStatus.style.color = 'rgb(199, 37, 78)'
