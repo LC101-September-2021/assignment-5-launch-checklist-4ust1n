@@ -32,6 +32,7 @@ function validateInput(testInput) {
 };
 let list;
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
+    list.style.visibility = 'hidden';
     for (let i = 2; i < arguments.length; i++) {
         let inputs = arguments[i];
         let validation = validateInput(inputs)
@@ -59,6 +60,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     launchStatus.style.color = 'rgb(65, 159, 106)'
 
     if (fuelLevel < 10000) {
+        list.style.visibility = 'visible'
         faulty.style.visibility = 'visible'
         fuelStatus.innerHTML = 'Fuel level too low for launch'
         launchStatus.style.color = 'rgb(199, 37, 78)'
@@ -67,6 +69,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`
     } 
     if (cargoMass > 10000) {
+        list.style.visibility = 'visible'
         faulty.style.visibility = 'visible'
         cargoStatus.innerHTML = 'Cargo mass too heavy for launch'
         launchStatus.style.color = 'rgb(199, 37, 78)'
