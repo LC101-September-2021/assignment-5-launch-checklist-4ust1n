@@ -12,7 +12,8 @@ window.addEventListener("load", () => {
         let fuelLevel = document.querySelector("input[name=fuelLevel]").value;
         let cargoMass = document.querySelector("input[name=cargoMass]").value;
         let list = document.getElementById('launchStatusCheck')
-        console.log(list, '1')
+        list.style.visibility = 'hidden'
+        
         formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass);
     });
 
