@@ -32,7 +32,6 @@ function validateInput(testInput) {
 };
 let list;
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
-    list.style.visibility = 'hidden';
     for (let i = 2; i < arguments.length; i++) {
         let inputs = arguments[i];
         let validation = validateInput(inputs)
@@ -54,6 +53,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     let pilotStatus = document.getElementById('pilotStatus')
     let copilotStatus = document.getElementById('copilotStatus')
     
+    list.style.visibility = 'visible';
     fuelStatus.innerHTML = 'Fuel level high enough for launch'
     cargoStatus.innerHTML = 'Cargo mass low enough for launch'
     launchStatus.innerHTML = 'Shuttle is Ready for Launch'
