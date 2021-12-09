@@ -36,6 +36,7 @@ describe ("GRADING DOM MANIPULATION TEST: ", function () {
         window.addEventListener('load', resolve);
           container = dom.window.document.body;
           list = screen.getByTestId(container, "faultyItems");
+          console.log(list.style)
           h2 = screen.getByTestId(container, "launchStatus");
           pilotStatus = screen.getByTestId(container, "pilotStatus");
           copilotStatus = screen.getByTestId(container, "copilotStatus");
